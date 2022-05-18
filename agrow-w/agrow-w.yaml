@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agrow-w
+  labels:
+    app: agrow-w
+spec:
+  selector:
+    matchLabels:
+      app: agrow-w 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "agrow-w"
+    spec:
+      containers:
+        - name: agrow-w-container
+          image: agrownegocios/agrow-w:v235
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: regcred

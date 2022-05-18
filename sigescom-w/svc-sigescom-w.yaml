@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-sigescom-w
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      nodePort: 30001
+  selector:
+    app: sigescom-w
