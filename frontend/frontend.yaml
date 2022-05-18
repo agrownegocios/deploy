@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: agrow-w
+  name: frontend
   labels:
-    app: agrow-w
+    app: frontend
 spec:
   selector:
     matchLabels:
-      app: agrow-w 
-  replicas: 1
+      app: frontend 
+  replicas: 2
   template:
     metadata:
       labels:
-        app: "agrow-w"
+        app: "frontend"
     spec:
       containers:
-        - name: agrow-w-container
-          image: agrownegocios/agrow-w:v235
+        - name: frontend-container
+          image: agrownegocios/frontend:v235
           ports:
             - containerPort: 80
       imagePullSecrets:

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sigescom-w
+  name: frontend-sigescom
   labels:
-    app: sigescom-w
+    app: frontend-sigescom
 spec:
   selector:
     matchLabels:
-      app: sigescom-w 
-  replicas: 1
+      app: frontend-sigescom 
+  replicas: 2
   template:
     metadata:
       labels:
-        app: "sigescom-w"
+        app: "frontend-sigescom"
     spec:
       containers:
-        - name: sigescom-w-container
-          image: agrownegocios/sigescom-w:v235
+        - name: frontend-sigescom-container
+          image: agrownegocios/frontend-sigescom:v235
           ports:
             - containerPort: 80
       imagePullSecrets:
