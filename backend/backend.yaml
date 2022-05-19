@@ -16,11 +16,14 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: agrownegocios/backend:v1
+          image: agrownegocios/backend:v235
           ports:
             - containerPort: 8080
           envFrom:
             - configMapRef:
                 name: backend-configmap
+          resources:
+            requests:
+              cpu: 10m
       imagePullSecrets:
         - name: regcred

@@ -19,5 +19,8 @@ spec:
           image: agrownegocios/frontend:v235
           ports:
             - containerPort: 80
+          resources:
+            requests:
+              cpu: 10m
       imagePullSecrets:
         - name: regcred

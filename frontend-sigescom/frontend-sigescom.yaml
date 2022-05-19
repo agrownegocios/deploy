@@ -19,6 +19,9 @@ spec:
           image: agrownegocios/frontend-sigescom:v235
           ports:
             - containerPort: 80
+          resources:
+            requests:
+              cpu: 10m
       imagePullSecrets:
         - name: regcred
 
