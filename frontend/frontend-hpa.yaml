@@ -9,10 +9,4 @@ spec:
     name: frontend
   minReplicas: 1
   maxReplicas: 10
-  metrics:
-    - type: Resources
-      resource:
-        name: cpu
-        target:
-          type: utilization
-          averageUtilization: 50
+  targetCPUUtilizationPercentage: 25
