@@ -1,4 +1,4 @@
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: frontend-sigescom-hpa
@@ -9,10 +9,4 @@ spec:
     name: frontend-sigescom
   minReplicas: 1
   maxReplicas: 10
-  metrics:
-    - type: Resources
-      resource:
-        name: cpu
-        target:
-          type: utilization
-          averageUtilization: 50
+  targetCPUUtilizationPercentage: 25
