@@ -4,7 +4,15 @@ metadata:
   name: ingress-hosts
   annotations:
     kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
+  tls:
+  - hosts:
+    - "www.agrownegocios.dev.br"
+    secretName: agrownegocios-tls
+  - hosts:
+    - "backend.agrownegocios.dev.br"
+    secretName: backend-tls
   rules:
   - host: "www.agrownegocios.dev.br"
     http:
