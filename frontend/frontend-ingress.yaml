@@ -16,3 +16,13 @@ spec:
             name: svc-frontend
             port:
               number: 80
+  - host: "backend.agrownegocios.dev.br"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: svc-backend
+            port:
+              number: 8080

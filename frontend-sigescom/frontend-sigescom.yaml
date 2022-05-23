@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend-sigescom-container
-          image: agrownegocios/frontend:v235
+          image: agrownegocios/frontend-sigescom:v235
           ports:
             - containerPort: 80
           resources:
