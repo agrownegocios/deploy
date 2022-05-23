@@ -1,7 +1,7 @@
-apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
+apiVersion: awspca.cert-manager.io/v1beta1
+kind: AWSPCAClusterIssuer
 metadata:
-  namespace: cert-manager
+  name: demo-test-root-ca
 spec:
   arn: arn:aws:acm:us-west-1:455213735070:certificate/28cbdd95-60a7-48f8-97ed-fe739bdd4206
   region: us-west-1
