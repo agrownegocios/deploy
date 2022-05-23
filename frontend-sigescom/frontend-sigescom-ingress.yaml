@@ -18,7 +18,7 @@ spec:
             name: svc-frontend-sigescom
             port:
               number: 80
-  - host: "bk.agrownegocios.dev.br"
+  - host: "backend.agrownegocios.dev.br"
     http:
       paths:
       - pathType: Prefix
@@ -27,7 +27,7 @@ spec:
           service:
             name: svc-backend
             port:
-              number: 80
+              number: 8080
   # tls:
   # - hosts:
   #   - "www.agrownegocios.dev.br"
