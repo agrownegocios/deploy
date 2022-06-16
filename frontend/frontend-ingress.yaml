@@ -14,7 +14,7 @@ spec:
     - "api.agrownegocios.com.br"
     secretName: backend-tls
   rules:
-  - host: "www.agrownegocios.dev.br"
+  - host: "app.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix
@@ -24,7 +24,7 @@ spec:
             name: svc-frontend
             port:
               number: 80
-  - host: "backend.agrownegocios.dev.br"
+  - host: "api.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix
