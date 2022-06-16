@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "www.agrownegocios.dev.br"
+    - "app.agrownegocios.com.br"
     secretName: agrownegocios-tls
   - hosts:
-    - "backend.agrownegocios.dev.br"
+    - "api.agrownegocios.com.br"
     secretName: backend-tls
   rules:
   - host: "www.agrownegocios.dev.br"
