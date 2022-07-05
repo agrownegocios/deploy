@@ -16,12 +16,9 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: agrownegocios/backend:v242
+          image: agrownegocios/backend:v249
           ports:
             - containerPort: 8080
-          envFrom:
-            - configMapRef:
-                name: backend-configmap
           resources:
             requests:
               cpu: 10m
