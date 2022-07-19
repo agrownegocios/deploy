@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: frontend 
+      app: frontend
   replicas: 2
   template:
     metadata:
@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: agrownegocios/frontend:v261
+          image: agrownegocios/frontend:v262
           ports:
             - containerPort: 80
           resources:
-            requests: 
+            requests:
               cpu: "0.05"
               memory: 20Mi
             limits:
