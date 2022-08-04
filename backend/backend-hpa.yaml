@@ -9,10 +9,4 @@ spec:
     name: backend
   minReplicas: 1
   maxReplicas: 3
-  metrics:
-    - type: Resources
-      resource:
-        name: cpu
-        target:
-          type: utilization
-          averageUtilization: 50
+  targetCPUUtilizationPercentage: 75
