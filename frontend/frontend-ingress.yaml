@@ -24,7 +24,7 @@ spec:
             name: svc-frontend
             port:
               number: 80
-  - host: "backadm.agrownegocios.com.br"
+  - host: "backend.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix
