@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-hosts
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt"
+spec:
+  tls:
+  - hosts:
+    - "adm.agrownegocios.com.br"
+    secretName: agrownegocios-tls
+  - hosts:
+    - "backadm.agrownegocios.com.br"
+    secretName: backend-tls
+  rules:
+  - host: "adm.agrownegocios.com.br"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: svc-frontend
+            port:
+              number: 80
+  - host: "backadm.agrownegocios.com.br"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: svc-backend
+            port:
+              number: 8080

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "frontend"
+    spec:
+      containers:
+        - name: frontend-container
+          image: agrownegocios/frontend-adm:v273
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "0.05"
+              memory: 20Mi
+            limits:
+              cpu: "0.75"
+              memory: 50Mi
+      imagePullSecrets:
+        - name: regcred
