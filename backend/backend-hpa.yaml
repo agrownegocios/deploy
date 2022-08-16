@@ -7,6 +7,12 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: backend
-  minReplicas: 1
+  minReplicas: 0
   maxReplicas: 3
-  targetCPUUtilizationPercentage: 75
+  metrics:
+    - type: Resources
+      resource:
+        name: cpu
+        target:
+          type: utilization
+          averageUtilization: 75
