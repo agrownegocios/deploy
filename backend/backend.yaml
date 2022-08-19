@@ -1,12 +1,30 @@
-apiVersion: autoscaling/v2beta2
-kind: HorizontalPodAutoscaler
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: backend-hpa
+  name: backend
+  labels:
+    app: backend
 spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: backend
-  minReplicas: 0
-  maxReplicas: 5
-  targetCPUUtilizationPercentage: 75
+  selector:
+    matchLabels:
+      app: backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "backend"
+    spec:
+      containers:
+        - name: backend-container
+          image: agrownegocios/backend:v273.01
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: "0.05"
+              memory: 20Mi
+            limits:
+              cpu: "0.75"
+              memory: 50Mi
+      imagePullSecrets:
+        - name: regcred
