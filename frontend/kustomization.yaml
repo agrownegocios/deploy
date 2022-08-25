@@ -6,6 +6,6 @@ resources:
 - service.yaml
 
 images:
-- name: frontend-container
+- name: frontend
   newName: agrownegocios/frontend
   newTag: tagDesejada
