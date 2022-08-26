@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: agrownegocios/backend:v274.02
+          image: agrownegocios/backend:v274.03
           ports:
             - containerPort: 8080
           resources:
