@@ -19,10 +19,10 @@ spec:
           image: agrownegocios/backend:v280.02
           resources:
             requests:
-              cpu: 10m
+              cpu: '0.25'
               memory: 20Mi 
             limits:
-              cpu: 20m
+              cpu: '0.75'
               memory: 25Mi
           ports:
             - containerPort: 8080
