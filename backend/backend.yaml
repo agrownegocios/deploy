@@ -17,10 +17,12 @@ spec:
       containers:
         - name: backend-container
           image: agrownegocios/backend:v280.02
+          resources:
+            limits:
+              cpu: 20m
+            requests:
+              cpu: 10m
           ports:
             - containerPort: 8080
-          resources:
-            requests:
-              cpu: 20m
       imagePullSecrets:
         - name: regcred
