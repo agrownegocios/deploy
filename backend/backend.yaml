@@ -19,11 +19,11 @@ spec:
           image: agrownegocios/backend:v280.02
           resources:
             requests:
-              cpu: '0.25'
-              memory: 20Mi 
+              cpu: 10m
+              memory: 5Mi 
             limits:
-              cpu: '0.75'
-              memory: 25Mi
+              cpu: 20m
+              memory: 10Mi
           ports:
             - containerPort: 8080
       imagePullSecrets:
