@@ -18,10 +18,12 @@ spec:
         - name: backend-container
           image: agrownegocios/backend:v280.02
           resources:
-            limits:
-              cpu: 20m
             requests:
-              cpu: 10m
+              cpu: 200m
+              memory: 20Mi 
+            limits:
+              cpu: 500m
+              memory: 25Mi
           ports:
             - containerPort: 8080
       imagePullSecrets:
