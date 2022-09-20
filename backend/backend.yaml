@@ -20,8 +20,10 @@ spec:
           resources:
             requests:
               cpu: 10m
+              memory: 20Mi
             limits:
               cpu: 20m
+              memory: 50Mi
           ports:
             - containerPort: 8080
       imagePullSecrets:
