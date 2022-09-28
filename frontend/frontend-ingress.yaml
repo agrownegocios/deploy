@@ -12,7 +12,7 @@ spec:
     secretName: agrownegocios-tls
   - hosts:
     - "backend.agrownegocios.com.br"
-    secretName: backend-tls
+    secretName: back-end-tls
   rules:
   - host: "erp.agrownegocios.com.br"
     http:
