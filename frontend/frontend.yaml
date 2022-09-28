@@ -24,6 +24,6 @@ spec:
               memory: "2Gi"
               cpu: "1000m"
       nodeSelector:
-        disktype: no-agrow-frondend
+        name: ip-172-31-6-135.us-east-2.compute.internal
       imagePullSecrets:
         - name: regcred
