@@ -33,4 +33,4 @@ spec:
           service:
             name: svc-backend
             port:
-              umber: 8080
+              number: 8080
