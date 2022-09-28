@@ -23,5 +23,7 @@ spec:
             requests:
               memory: "2Gi"
               cpu: "1000m"
+      nodeSelector:
+        disktype: no-agrow-frondend
       imagePullSecrets:
         - name: regcred
