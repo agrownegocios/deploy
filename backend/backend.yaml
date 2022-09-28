@@ -21,9 +21,7 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              memory: "1Gi"
-              cpu: "0.30"
-      # nodeSelector:
-      #   disktype: node-backend-agrow
+              memory: "2Gi"
+              cpu: "1000m"
       imagePullSecrets:
         - name: regcred
