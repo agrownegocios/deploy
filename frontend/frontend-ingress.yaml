@@ -8,13 +8,13 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "adm.agrownegocios.com.br"
+    - "erp.agrownegocios.com.br"
     secretName: agrownegocios-tls
   - hosts:
-    - "backadm.agrownegocios.com.br"
+    - "backend.agrownegocios.com.br"
     secretName: backend-tls
   rules:
-  - host: "adm.agrownegocios.com.br"
+  - host: "erp.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix
@@ -24,7 +24,7 @@ spec:
             name: svc-frontend
             port:
               number: 80
-  - host: "backadm.agrownegocios.com.br"
+  - host: "backend.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix
