@@ -12,7 +12,7 @@ spec:
     secretName: agrownegocios-tls
   - hosts:
     - "backend.agrownegocios.com.br"
-    secretName: back-end-tls
+    secretName: backend-tls
   rules:
   - host: "erp.agrownegocios.com.br"
     http:
@@ -32,5 +32,5 @@ spec:
         backend:
           service:
             name: svc-backend
-            port:
-              number: 8080
+            ponrt:
+              umber: 8080
