@@ -23,5 +23,7 @@ spec:
             requests:
               memory: 100M
               cpu: 0.3
+      nodeSelector:
+        disktype: node-agrow-backend
       imagePullSecrets:
         - name: regcred
