@@ -21,7 +21,7 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              memory: "1.2Gi"
-              cpu: "0.03"
+              memory: 100M
+              cpu: 0.3
       imagePullSecrets:
         - name: regcred
