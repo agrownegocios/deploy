@@ -2,10 +2,11 @@ apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
   name: letsencrypt
+  namespace: cert-manager
 spec:
   acme:
-    email: admin@agrownegocios.dev.br
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: developer@agrownegocios.com.br
     privateKeySecretRef:
       name: letsencrypt
     solvers:

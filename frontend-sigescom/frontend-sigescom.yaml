@@ -16,22 +16,14 @@ spec:
     spec:
       containers:
         - name: frontend-sigescom-container
-          image: agrownegocios/frontend-sigescom:v235
+          image: agrownegocios/frontend-sigescom:v282.03
           ports:
             - containerPort: 80
           resources:
-            requests: 
-              cpu: "0.05"
-              memory: 20Mi
-            limits:
-              cpu: "0.05"
-              memory: 25Mi
+            requests:
+              cpu: "0.3"
+              memory: 100M
+      nodeSelector:
+        disktype: node-sigescom-w-frontend
       imagePullSecrets:
         - name: regcred
-
-# https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-#kubectl create secret docker-registry regcred --docker-server=<your-registry-server> --docker-username=<your-name> --docker-password=<your-pword> --docker-email=<your-email>
-# <your-registry-server>. Use https://index.docker.io/v1/para DockerHub.
-# <your-name> é o seu nome de usuário do Docker.
-# <your-pword> é sua senha do Docker.
-# <your-email> é o seu e-mail do Docker.
