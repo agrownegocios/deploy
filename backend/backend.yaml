@@ -22,6 +22,6 @@ spec:
           resources:
             requests:
               memory: "2Gi"
-              cpu: "0.30"
+              cpu: "0.03"
       imagePullSecrets:
         - name: regcred
