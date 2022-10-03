@@ -6,6 +6,13 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
+  tls:
+  - hosts:
+    - "sigescom.agrownegocios.com.br"
+    secretName: sigescom-tls
+  - hosts:
+    - "backsig.agrownegocios.com.br"
+    secretName: backsig-tls
   rules:
   - host: "sigescom.agrownegocios.com.br"
     http:
