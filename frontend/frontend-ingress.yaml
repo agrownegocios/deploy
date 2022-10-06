@@ -13,8 +13,21 @@ spec:
   - hosts:
     - "backend.agrownegocios.com.br"
     secretName: backend-tls
+  - hosts:
+    - "sigescom.agrownegocios.com.br"
+    secretName: sigescom-tls
   rules:
   - host: "erp.agrownegocios.com.br"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: svc-frontend
+            port:
+              number: 80
+  - host: "sigescom.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix
