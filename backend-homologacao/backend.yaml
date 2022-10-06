@@ -21,8 +21,7 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              memory: 100M
-              cpu: 0.3
+              cpu: 10m
       nodeSelector:
         disktype: node-homologacao-backend
       imagePullSecrets:
