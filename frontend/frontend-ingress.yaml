@@ -9,10 +9,10 @@ spec:
   tls:
   - hosts:
     - "erp.agrownegocios.com.br"
-    secretName: front-end-tls
+    secretName: agrownegocios-tls
   - hosts:
     - "backend.agrownegocios.com.br"
-    secretName: back-end-tls
+    secretName: backend-tls
   - hosts:
     - "sigescom.agrownegocios.com.br"
     secretName: sigescom-tls
