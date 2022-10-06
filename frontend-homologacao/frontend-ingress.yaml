@@ -2,29 +2,29 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-hosts
-  annotations:    
+  annotations:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt"
 spec:
   tls:
   - hosts:
-    - "sigescom.agrownegocios.com.br"
-    secretName: sigescom-tls
+    - "homologacao.agrownegocios.com.br"
+    secretName: homologacao-tls
   - hosts:
-    - "backsig.agrownegocios.com.br"
-    secretName: backsig-tls
+    - "backhom.agrownegocios.com.br"
+    secretName: backhom-tls
   rules:
-  - host: "sigescom.agrownegocios.com.br"
+  - host: "homologacao.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: svc-frontend-sigescom
+            name: svc-frontend
             port:
               number: 80
-  - host: "backsig.agrownegocios.com.br"
+  - host: "backhom.agrownegocios.com.br"
     http:
       paths:
       - pathType: Prefix

@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-sigescom
+  name: frontend
   labels:
-    app: frontend-sigescom
+    app: frontend
 spec:
   selector:
     matchLabels:
-      app: frontend-sigescom 
+      app: frontend
   replicas: 1
   template:
     metadata:
       labels:
-        app: "frontend-sigescom"
+        app: "frontend"
     spec:
       containers:
-        - name: frontend-sigescom-container
-          image: agrownegocios/frontend-sigescom:v282.04
+        - name: frontend-container
+          image: agrownegocios/frontend:v283.01
           ports:
             - containerPort: 80
           resources:
             requests:
               cpu: "0.3"
-              memory: 100M
+              memory: 50M
       nodeSelector:
-        disktype: node-sigescom-w-frontend
+        disktype: node-homologacao-frontend
       imagePullSecrets:
         - name: regcred
