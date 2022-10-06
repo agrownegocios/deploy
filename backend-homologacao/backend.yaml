@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: agrownegocios/backend-sigescom:v283.01
+          image: agrownegocios/backend:v283.01
           ports:
             - containerPort: 8080
           resources:
             requests:
-              memory: 50M
+              memory: 100M
               cpu: 0.3
       nodeSelector:
-        disktype: node-homologacao-w-backend
+        disktype: node-homologacao-backend
       imagePullSecrets:
         - name: regcred
