@@ -16,12 +16,13 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: agrownegocios/frontend-homologacao:v285.01
+          image: agrownegocios/frontend-homologacao:v288
           ports:
             - containerPort: 80
           resources:
             requests:
-              cpu: 10m
+              cpu: "0.3"
+              memory: 50M
       nodeSelector:
         disktype: node-homologacao-frontend
       imagePullSecrets:
