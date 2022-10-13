@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: agrownegocios/frontend-homologacao:v288
+          image: agrownegocios/frontend-homologacao:v289
           ports:
             - containerPort: 80
           resources:
