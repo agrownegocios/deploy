@@ -7,5 +7,5 @@ resources:
 
 images:
 - name: frontend
-  newName: agrownegocios/frontend
+  newName: agrownegocios/frontend-teste
   newTag: tagDesejada
