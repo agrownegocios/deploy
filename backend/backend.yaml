@@ -27,3 +27,4 @@ spec:
         disktype: node-agrow-backend
       imagePullSecrets:
         - name: regcred
+
