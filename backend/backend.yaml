@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: agrownegocios/backend:v291
+          image: agrownegocios/backend:v296
           ports:
             - containerPort: 8080
           resources:
@@ -27,3 +27,4 @@ spec:
         disktype: node-agrow-backend
       imagePullSecrets:
         - name: regcred
+
