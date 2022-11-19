@@ -21,8 +21,8 @@ spec:
             - containerPort: 8080
           resources:
             requests:
-              memory: "2Gi"
-              cpu: "1000m"
+              memory: "1.5Gi" #(37,5%)
+              cpu: "750m" #1vCpu = 1000 (37,5%)
       nodeSelector:
         disktype: node-agrow-backend
       imagePullSecrets:
