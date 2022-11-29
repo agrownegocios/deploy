@@ -15,14 +15,14 @@ spec:
         app: "frontend"
     spec:
       containers:
-        - name: frontend-container
-          image: agrownegocios/frontend-teste:v307
+        - name: frontend-containerkubec
+          image: agrownegocios/frontend-teste:v321
           ports:
             - containerPort: 80
           resources:
             requests:
-              memory: "2Gi"
-              cpu: "1000m"
+              memory: "1.5Gi" #(37,5%)
+              cpu: "750m" #1vCpu = 1000 (37,5%)
       nodeSelector:
         disktype: node-homologacao-frontend
       imagePullSecrets:
