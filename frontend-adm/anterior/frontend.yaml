@@ -15,15 +15,16 @@ spec:
         app: "frontend"
     spec:
       containers:
-        - name: frontend
-          image: frontend
+        - name: frontend-container
+          image: agrownegocios/frontend-adm:latest
           ports:
             - containerPort: 80
           resources:
             requests:
-              memory: "1.5Gi" #(37,5%)
-              cpu: "750m" #1vCpu = 1000 (37,5%)
-      nodeSelector:
-        disktype: node-agrow-frontend
+              cpu: "0.05"
+              memory: 20Mi
+            limits:
+              cpu: "0.75"
+              memory: 50Mi
       imagePullSecrets:
         - name: regcred
