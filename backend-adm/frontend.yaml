@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: "frontend"
+    spec:
+      containers:
+        - name: frontend
+          image: frontend
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "1.5Gi" #(37,5%)
+              cpu: "750m" #1vCpu = 1000 (37,5%)
+      nodeSelector:
+        disktype: node-agrow-frontend
+      imagePullSecrets:
+        - name: regcred
