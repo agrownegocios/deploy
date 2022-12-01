@@ -3,8 +3,9 @@ kind: Kustomization
 
 resources:
 - deployment.yaml
+- svc.yaml
 
 images:
-- name: frontend
+- name: frontend-img
   newName: agrownegocios/frontend-adm
-  newTag: e6643a9109b841bda8f8354b3fa755264d66bf9a
+  newTag: f9b216022277d355253ba57a9031942349fe5490
