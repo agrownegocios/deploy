@@ -21,7 +21,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: svc-frontend
+            name: frontend-svc
             port:
               number: 80
   - host: "backadm.agrownegocios.com.br"
@@ -31,6 +31,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: svc-backend
+            name: backend-svc
             port:
               number: 8080
